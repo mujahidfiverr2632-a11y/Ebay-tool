@@ -1,0 +1,20 @@
+[project]
+name = "ebay-cross-border-intelligence"
+version = "0.1.0"
+description = "Evidence-first eBay cross-border intelligence MCP server"
+requires-python = ">=3.13"
+dependencies = [
+  "fastapi",
+  "pydantic",
+  "httpx",
+  "beautifulsoup4",
+  "python-dotenv",
+  "mcp",
+]
+
+[dependency-groups]
+dev = [
+  "workers-py",
+  "workers-runtime-sdk",
+  "pytest",
+]
