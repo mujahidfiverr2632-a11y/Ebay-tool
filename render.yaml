@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ebay-cross-border-intelligence
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /health
+    envVars:
+      - key: EBAY_CLIENT_ID
+        sync: false
+      - key: EBAY_CLIENT_SECRET
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: MCP_AUTH_TOKEN
+        sync: false
